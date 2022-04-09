@@ -22,8 +22,8 @@
   width: 50%;
 }
 .css-wb57ya-MuiFormControl-root-MuiTextField-root {
-  background: #303030;
-  border-radius: 8px;
+  background: #303030 !important;
+  border-radius: 8px !important;
 }
 .scroll {
    width: 200px;
