@@ -9,22 +9,23 @@ const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
 export default function CheckboxesTags() {
-    const [selectedFilm, setSelectedFilm] = useState([]);
+    const [selectedName, setSelectedName] = useState([]);
     return (
         <Autocomplete
             multiple
             id="checkboxes-tags-demo"
             options={dropdownName}
             disableCloseOnSelect
-            onChange={(e, film) => {
-                setSelectedFilm(film);
+            onChange={(e, employee) => {
+                setSelectedName(employee);
+                console.log(selectedName)
             }}
             getOptionLabel={option => option.title}
             renderOption={(option, state) => {
-                const selectFilmIndex = selectedFilm.findIndex(
-                    film => film.title.toLowerCase() === "all employees"
+                const selectEmployeeIndex = selectedName.findIndex(
+                    employee => employee.title.toLowerCase() === "all employees"
                 );
-                if (selectFilmIndex > -1) {
+                if (selectEmployeeIndex > -1) {
                     state.selected = true;
                 }
                 return (
